@@ -17,6 +17,7 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'vim-utils/vim-man'
+Plugin 'pignacio/vim-yapf-format'
 
 call vundle#end()
 
@@ -32,7 +33,6 @@ command W wa | make -j1
 command PrettyFormat execute '%! astyle -A2 -F -S -K -C -q --lineend=linux' | go 1 | %s/{$/{\r/g | %s/\s\+$//e | %s/\n\{3,}/\r\r/e 
 command SelToClip execute 'call system("xclip",@0)'
 
-command Yapf %!yapf3
 command Pylint w | SyntasticCheck pylint
 
 command FixIt YcmCompleter FixIt
@@ -85,7 +85,7 @@ set laststatus=2
 let g:airline_powerline_fonts=0
 let g:airline#extensions#tabline#enabled = 1
 
-colorscheme ron
+colorscheme morning
 
 highlight LineNr ctermfg=243
 highlight CursorLineNr ctermfg=243
