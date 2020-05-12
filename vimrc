@@ -18,6 +18,12 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'vim-utils/vim-man'
 Plugin 'pignacio/vim-yapf-format'
+Plugin 'davidhalter/jedi-vim'
+Plugin 'roxma/nvim-yarp'
+Plugin 'ncm2/ncm2'
+Plugin 'ncm2/ncm2-path'
+Plugin 'ncm2/ncm2-bufword'
+Plugin 'ncm2/ncm2-jedi'
 
 call vundle#end()
 
@@ -48,12 +54,33 @@ set splitright
 
 set switchbuf=useopen,usetab,newtab
 
+
+"ncm2
+autocmd BufEnter *.py call ncm2#enable_for_buffer()
+set completeopt=menuone,noselect,noinsert
+" make it FAST
+let ncm2#popup_delay = 5
+let ncm2#complete_length = [[1,1]]
+let g:ncm2#matcher = 'substrfuzzy'
+
+"jedi-vim
+let g:jedi#auto_initialization = 1
+let g:jedi#completions_enabled = 0
+let g:jedi#auto_vim_configuration = 0
+let g:jedi#smart_auto_mappings = 0
+let g:jedi#popup_on_dot = 0
+let g:jedi#completions_command = ""
+let g:jedi#show_call_signatures = "1"
+
+
+
 "YouCompleteMe (ycm)
 "let g:ycm_confirm_extra_conf = 0
 let g:ycm_global_ycm_extra_conf='~/.vim/bundle/YouCompleteMe/.ycm_extra_conf.py'
 let g:ycm_enable_diagnostic_highlighting = 0
 let g:ycm_always_populate_location_list=1
 let g:ycm_python_binary_path='python3'
+let g:ycm_filetype_blacklist={ 'python':1 }
 
 "pydoc
 let g:pydoc_open_cmd = 'vsp'
