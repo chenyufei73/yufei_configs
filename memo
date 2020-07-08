@@ -1,0 +1,9 @@
+how to set up a new ubuntu machine:
+
+1, download ubuntu 20.04 from website and create a bootable usb stick.
+
+2, use the usb to start a new machine and install.
+
+3, download vim :
+
+4, ~/.bashrc  ~/.vimrc
