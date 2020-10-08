@@ -6,8 +6,17 @@ alias vim="nvim -p"
 #m3
 alias m3='cd ~/projects/m3'
 
+#mdc
+alias mdc='cd ~/projects/m3/mdc'
+
 #blx
 alias blx='cd ~/projects/m3/blx'
+
+#itb
+alias itb='cd ~/projects/m3/itb'
+
+#srv03
+alias srv03='cd ~/projects/fort/modules/srv03'
 
 #mixer
 alias mixer='cd ~/projects/fort/modules/mixer'

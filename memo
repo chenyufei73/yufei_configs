@@ -7,3 +7,5 @@ how to set up a new ubuntu machine:
 3, download vim :
 
 4, ~/.bashrc  ~/.vimrc
+
+5, git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
