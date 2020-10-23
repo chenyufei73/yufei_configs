@@ -9,3 +9,13 @@ how to set up a new ubuntu machine:
 4, ~/.bashrc  ~/.vimrc
 
 5, git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+6, how to resize?
+
+df -h
+
+lsblk
+
+sudo growpart /dev/nvme0n1 1
+
+resize2fs /dev/root
